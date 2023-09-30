@@ -161,12 +161,15 @@ button {
   background: transparent;
 }
 
+a,
+img,
 button,
 input,
 textarea,
 select {
   font-family: inherit;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .icon {
@@ -1295,11 +1298,62 @@ html {
 }
 @media (max-width: 991.98px) {
   .navbar {
-    display: none;
+    position: fixed;
+    inset: 0 50% 0 0;
+    z-index: 9;
+    margin-left: 0;
+    padding: 20px 0;
+    background: #fff;
+    translate: -100%;
+    transition: translate 0.5s;
+  }
+  .navbar.show {
+    translate: 0;
+  }
+  .navbar.show ~ .navbar__overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.navbar__close-btn {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  .navbar__close-btn {
+    display: block;
+    padding: 10px 40px;
+  }
+}
+.navbar__overlay {
+  visibility: hidden;
+  opacity: 0;
+}
+@media (max-width: 991.98px) {
+  .navbar__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 8;
+    transition: opacity, visibility;
+    transition-duration: 0.5s;
+    background: rgba(0, 0, 0, 0.4);
+  }
+}
+@media (max-width: 991.98px) {
+  .navbar__list {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 .navbar__item:hover .dropdown {
   display: block;
+}
+@media (max-width: 991.98px) {
+  .navbar__item {
+    width: 100%;
+  }
+  .navbar__item:hover .dropdown {
+    display: none;
+  }
 }
 .navbar__link {
   gap: 6px;
@@ -1308,6 +1362,14 @@ html {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 146.667%;
+}
+@media (max-width: 991.98px) {
+  .navbar__link {
+    justify-content: space-between;
+    padding: 0 40px;
+    font-size: 1.6rem;
+    line-height: 150%;
+  }
 }
 .navbar__arrow {
   margin-top: 3px;
