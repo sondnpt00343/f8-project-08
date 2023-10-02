@@ -42,13 +42,15 @@
 
         margin-left: 0;
         padding: 20px 0;
-        background: #fff;
+        border-radius: 0px 20px 20px 0px;
+        background: var(--sidebar-bg);
 
         translate: -100%;
         transition: translate 0.5s;
 
         &.show {
             translate: 0;
+            box-shadow: 0px 40px 90px 20px var(--sidebar-shadow);
         }
 
         &.show ~ &__overlay {
@@ -57,12 +59,20 @@
         }
     }
 
+    @include abstracts.breakpoint(sm) {
+        inset: 0 20% 0 0;
+    }
+
     &__close-btn {
         display: none;
 
         @include abstracts.breakpoint(lg) {
             display: block;
             padding: 10px 40px;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            padding: 0 20px 10px;
         }
     }
 
@@ -90,7 +100,15 @@
             align-items: flex-start;
 
             overflow-y: auto;
-            height: calc(100% - 26px);
+            height: calc(100% - 40px);
+        }
+
+        @include abstracts.breakpoint(md) {
+            height: calc(100% - 140px);
+        }
+
+        @include abstracts.breakpoint(sm) {
+            height: calc(100% - 124px);
         }
     }
 
@@ -128,6 +146,11 @@
 
             font-size: 1.6rem;
             line-height: 150%;
+        }
+
+        @include abstracts.breakpoint(sm) {
+            height: 44px;
+            padding: 0 20px;
         }
     }
 
@@ -200,5 +223,28 @@
         height: 50px;
         border-radius: 8px;
         cursor: pointer;
+    }
+}
+
+.nav-btn {
+    height: 50px;
+    align-items: center;
+    padding: 0 40px;
+
+    @include abstracts.breakpoint(sm) {
+        height: 44px;
+        padding: 0 20px;
+    }
+
+    &__title {
+        margin-left: 16px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__qnt {
+        @extend .nav-btn__title;
+        margin-left: auto;
     }
 }
