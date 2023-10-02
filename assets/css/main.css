@@ -1437,6 +1437,7 @@ html {
     flex-direction: column;
     align-items: flex-start;
     overflow-y: auto;
+    overscroll-behavior: contain;
     height: calc(100% - 40px);
   }
 }
@@ -1637,6 +1638,11 @@ html {
   }
   .dropdown__inner::before {
     content: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .dropdown__inner {
+    padding: 0 20px;
   }
 }
 
