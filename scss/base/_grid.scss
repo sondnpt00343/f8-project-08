@@ -42,6 +42,7 @@ $gutters: (
 
 .container {
     @extend .container-fluid;
+    width: 1370px;
 }
 
 .row {

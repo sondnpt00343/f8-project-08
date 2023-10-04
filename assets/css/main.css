@@ -189,6 +189,10 @@ select {
   margin-right: auto;
 }
 
+.container {
+  width: 1370px;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
