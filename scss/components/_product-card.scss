@@ -1,0 +1,54 @@
+.product-card {
+    padding: 16px;
+    border-radius: 20px;
+    background: var(--product-card-bg);
+    box-shadow: 0px 20px 60px 10px var(--product-card-shadow);
+
+    &__img-wrap {
+        position: relative;
+        padding-top: 100%;
+    }
+
+    &__thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__like-btn {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    &__title {
+        margin-top: 16px;
+    }
+
+    &__title,
+    &__price,
+    &__score {
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__brand {
+        margin: 16px 0;
+        color: #9e9da8;
+        font-size: 1.5rem;
+        line-height: 146.667%;
+    }
+
+    &__row {
+        display: flex;
+        align-items: center;
+    }
+
+    &__star {
+        margin: 0 6px 0 auto;
+    }
+}
