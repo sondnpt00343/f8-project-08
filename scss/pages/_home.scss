@@ -18,8 +18,6 @@
     &__cate {
         --grid-gutter-x: 51px;
 
-        margin-top: 20px;
-
         @include abstracts.screen(lg) {
             --grid-gutter-x: 24px;
         }
