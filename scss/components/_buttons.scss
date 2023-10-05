@@ -28,11 +28,11 @@
 
     box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
 
-    &:not(&--liked) .like-btn__icon--liked {
+    &:not(&--liked) &__icon--liked {
         display: none;
     }
 
-    &--liked .like-btn__icon {
+    &--liked &__icon {
         display: none;
     }
 
