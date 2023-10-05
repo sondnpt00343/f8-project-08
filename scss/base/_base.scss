@@ -36,9 +36,11 @@ button,
 input,
 textarea,
 select {
+    padding: 0;
     font-family: inherit;
     color: inherit;
     outline: none;
+    border: none;
     -webkit-tap-highlight-color: transparent;
 }
 

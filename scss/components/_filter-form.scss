@@ -4,8 +4,6 @@
 }
 
 .filter {
-    display: none;
-
     position: absolute;
     right: 0;
     top: 50px;
@@ -78,20 +76,48 @@
             }
         }
 
-        &-input,
+        &-text-input,
         &-select-wrap {
             border-radius: 6px;
             border: 1px solid #d2d1d6;
         }
 
-        &-input {
-            width: 121px;
-            height: 36px;
-            padding: 0 12px;
+        &-text-input {
+            display: flex;
+            align-items: center;
 
+            width: 334px;
+            height: 44px;
+            padding: 0 16px;
+
+            overflow: hidden;
+
+            &--small {
+                width: 121px;
+                height: 36px;
+                padding: 0 12px;
+            }
+        }
+
+        &-text-input--small &-input {
             font-size: 1.4rem;
+        }
+
+        &-input {
+            width: 100%;
+
+            font-size: 1.5rem;
             font-weight: 500;
-            line-height: 142.857%;
+            line-height: 146.667%;
+
+            &::placeholder {
+                color: #9e9da8;
+                font-weight: 400;
+            }
+        }
+
+        &-input-icon {
+            margin-left: 12px;
         }
 
         &-select-wrap {
