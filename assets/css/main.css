@@ -2096,24 +2096,20 @@ html {
   position: absolute;
   right: 0;
   top: 55px;
-  padding: 30px;
+  padding: 30px 0;
   border-radius: 20px;
   background: var(--filter-form-bg);
   filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
   transition: opacity, visibility;
   transition-duration: 0.2s;
 }
-@media (max-width: 1199.98px) {
-  .filter {
-    height: calc(100vh - 80px);
-    padding-bottom: 0;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-  }
-}
 @media (max-width: 575.98px) {
   .filter {
-    width: 85vw;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    border-radius: 0;
   }
 }
 .filter.hide {
@@ -2150,7 +2146,8 @@ html {
   margin-top: 20px;
 }
 .filter__form-group--inline {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 .filter__form-slider {
@@ -2193,6 +2190,11 @@ html {
   height: 36px;
   padding: 0 12px;
 }
+@media (max-width: 1199.98px) {
+  .filter__form-text-input--small {
+    width: 100%;
+  }
+}
 @media (max-width: 575.98px) {
   .filter__form-text-input {
     width: 100%;
@@ -2210,6 +2212,11 @@ html {
 .filter__form-input::placeholder {
   color: #9e9da8;
   font-weight: 400;
+}
+@media (max-width: 575.98px) {
+  .filter__form-input {
+    font-size: 1.6rem;
+  }
 }
 .filter__form-input-icon {
   margin-left: 12px;
@@ -2231,6 +2238,11 @@ html {
   line-height: 142.857%;
   cursor: pointer;
 }
+@media (max-width: 1199.98px) {
+  .filter__form-select {
+    flex: 1;
+  }
+}
 .filter__form-select + .filter__form-select {
   border-left: 1px solid #d2d1d6;
 }
@@ -2238,6 +2250,11 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px;
+}
+@media (max-width: 575.98px) {
+  .filter__form-tags {
+    gap: 10px;
+  }
 }
 .filter__form-tag {
   padding: 6px 12px;
@@ -2272,11 +2289,10 @@ html {
   justify-content: flex-end;
   margin-top: 32px;
 }
-@media (max-width: 1199.98px) {
+@media (max-width: 575.98px) {
   .filter__footer {
     position: sticky;
-    bottom: 0;
-    padding-bottom: 16px;
+    bottom: 30px;
     background: var(--filter-form-bg);
   }
 }
@@ -2287,6 +2303,7 @@ html {
 @media (max-width: 575.98px) {
   .filter__cancel, .filter__submit {
     flex: 1;
+    height: 42px;
   }
 }
 .filter__cancel {
@@ -2295,9 +2312,23 @@ html {
 .filter__submit {
   font-size: 1.4rem;
 }
+.filter__heading, .filter__content, .filter__footer {
+  padding: 0 30px;
+}
+.filter__content {
+  max-height: calc(100vh - 350px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
 @media (max-width: 1199.98px) {
   .filter__content {
     flex-direction: column;
+  }
+}
+@media (max-width: 575.98px) {
+  .filter__content {
+    max-height: calc(100vh - 230px);
+    padding-bottom: 60px;
   }
 }
 
