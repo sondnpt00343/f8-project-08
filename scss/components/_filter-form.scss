@@ -6,13 +6,20 @@
 .filter {
     position: absolute;
     right: 0;
-    top: 50px;
+    top: 55px;
 
     padding: 30px;
     border-radius: 20px;
 
     background: var(--filter-form-bg);
     filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
+
+    &__arrow {
+        position: absolute;
+        top: -15px;
+        right: 24px;
+        height: 20.5px;
+    }
 
     &__heading {
         font-size: 2.2rem;
@@ -180,5 +187,25 @@
         width: 1px;
         margin: 0 30px;
         background: #eee;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 32px;
+    }
+
+    &__cancel,
+    &__submit {
+        height: 38px;
+        padding: 0 10px;
+    }
+
+    &__cancel {
+        font-size: 1.5rem;
+    }
+
+    &__submit {
+        font-size: 1.4rem;
     }
 }
