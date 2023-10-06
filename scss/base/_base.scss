@@ -44,6 +44,10 @@ select {
     -webkit-tap-highlight-color: transparent;
 }
 
+input {
+    background: transparent;
+}
+
 .icon {
     filter: var(--icon-color);
 }
