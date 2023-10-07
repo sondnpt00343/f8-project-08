@@ -7,6 +7,9 @@ html.dark {
 
     --body-bg: #292e39;
     --header-bg-color: #171c28;
+    --footer-bg-color: var(--header-bg-color);
+    --footer-text-color: #9e9da6;
+
     --top-act-group-bg-color: #292e39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.2);
     --top-act-group-separate: #ededf6;

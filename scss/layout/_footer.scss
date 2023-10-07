@@ -1,0 +1,186 @@
+@use "../abstracts";
+
+.footer {
+    margin-top: 50px;
+    padding: 50px 0;
+    background: var(--footer-bg-color);
+
+    &__row {
+        display: grid;
+        grid-template-columns: 2fr 1.3fr 1fr 1fr 1.5fr;
+        gap: 60px;
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__logo.logo {
+        @include abstracts.screen(lg) {
+            margin-left: 0;
+        }
+    }
+
+    &__desc {
+        margin-top: 30px;
+        font-size: 1.5rem;
+        line-height: 1.5;
+
+        @include abstracts.screen(lg) {
+            width: min(400px, 100%);
+        }
+    }
+
+    &__help-text {
+        margin-top: 40px;
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.8rem;
+    }
+
+    &__list {
+        margin-top: 18px;
+    }
+
+    &__link,
+    &__text {
+        padding: 8px 0;
+        font-size: 1.5rem;
+        line-height: 1.4;
+    }
+
+    &__link {
+        display: inline-block;
+
+        &:hover {
+            color: #0071dc;
+        }
+    }
+
+    &__text,
+    &__copyright {
+        color: var(--footer-text-color);
+    }
+
+    &__text {
+        @include abstracts.screen(lg) {
+            width: min(400px, 100%);
+        }
+    }
+
+    &__label {
+        margin-top: 20px;
+        font-weight: 500;
+    }
+
+    &__form {
+        display: flex;
+        gap: 10px;
+        padding: 16px 0;
+
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
+
+        @include abstracts.screen(lg) {
+            flex-direction: row;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 2px solid #d2d1d6;
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        &::placeholder {
+            font-weight: 400;
+        }
+
+        @include abstracts.screen(lg) {
+            width: 40%;
+        }
+
+        @include abstracts.screen(md) {
+            width: 50%;
+        }
+
+        @include abstracts.screen(sm) {
+            flex: 1;
+        }
+    }
+
+    &__bottom {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include abstracts.screen(md) {
+            flex-direction: column-reverse;
+            gap: 50px;
+        }
+    }
+
+    &__copyright {
+        font-size: 1.4rem;
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+
+        filter: grayscale(50%);
+        transition: translate, filter;
+        transition-duration: 0.3s;
+
+        &--facebook {
+            background: #4863a9;
+        }
+
+        &--youtube {
+            background: #f00;
+        }
+
+        &--tiktok {
+            background: #000;
+        }
+
+        &--twitter {
+            background: #4999e6;
+        }
+
+        &--linkedin {
+            background: #2f71ab;
+        }
+
+        &:hover {
+            filter: grayscale(0);
+            translate: 0 -3px;
+        }
+    }
+
+    &__social-icon {
+        width: 14px;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%)
+            contrast(99%);
+    }
+}
