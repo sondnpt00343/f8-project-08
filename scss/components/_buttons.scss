@@ -43,6 +43,9 @@
 
 // Buttons
 .btn {
+    display: flex;
+    align-items: center;
+
     height: 46px;
     padding: 0 20px;
     border-radius: 6px;
