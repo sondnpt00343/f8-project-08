@@ -22,6 +22,7 @@
         align-items: center;
         justify-content: center;
         gap: 50px;
+        background: var(--auth-intro-bg);
 
         &-logo,
         &-next {
@@ -48,6 +49,7 @@
             font-size: 1.8rem;
             font-weight: 500;
             line-height: 144.444%;
+            color: var(--auth-intro-text-color);
 
             @include abstracts.screen(md) {
                 font-size: 1.5rem;
@@ -79,6 +81,10 @@
             width: min(460px, 100%);
             margin: 0 auto;
             padding: 50px 0;
+
+            @include abstracts.screen(md) {
+                padding: 32px 0;
+            }
         }
     }
 
@@ -87,15 +93,17 @@
         font-size: 3rem;
         font-weight: 500;
         line-height: 146.667%;
+        color: var(--auth-heading-color);
 
         @include abstracts.screen(md) {
+            margin-top: 40px;
             font-size: 2.2rem;
         }
     }
 
     &__desc {
         margin-top: 10px;
-        padding: 0 30px;
+        padding: 0 20px;
         color: #9e9da8;
         font-size: 1.5rem;
         font-weight: 500;
@@ -131,6 +139,11 @@
         flex-direction: column;
         gap: 30px;
         margin-top: 50px;
+
+        @include abstracts.screen(md) {
+            margin-top: 40px;
+            gap: 20px;
+        }
     }
 
     &__btn {
@@ -144,6 +157,7 @@
         line-height: 144.444%;
 
         @include abstracts.screen(md) {
+            margin-top: 40px;
             font-size: 1.6rem;
         }
 

@@ -1356,6 +1356,11 @@ html.dark {
   --filter-form-shadow: rgba(0, 0, 0, 0.4);
   --filter-form-tag-bg: #171c28;
   --filter-form-arrow: var(--dropdown-arrow-color);
+  --auth-content-bg: #292e39;
+  --auth-intro-bg: #171c28;
+  --auth-intro-text-color: #b9babe;
+  --auth-heading-color: #b9babe;
+  --form-placeholder-color: #b9babe;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1389,6 +1394,7 @@ html {
   --filter-form-shadow: rgba(200, 200, 200, 0.4);
   --filter-form-tag-bg: #f8f8fb;
   --auth-content-bg: #fff;
+  --form-placeholder-color: #d2d1d6;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1399,6 +1405,11 @@ html {
 @media (max-width: 767.98px) {
   html {
     --cate-item-bg: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --auth-intro-bg: #fff;
   }
 }
 
@@ -2537,6 +2548,11 @@ html {
 .form__group {
   margin-top: 30px;
 }
+@media (max-width: 767.98px) {
+  .form__group {
+    margin-top: 20px;
+  }
+}
 .form__group--inline {
   display: flex;
   align-items: center;
@@ -2579,7 +2595,7 @@ html {
   margin-left: 12px;
 }
 .form__input::placeholder {
-  color: #d2d1d6;
+  color: var(--form-placeholder-color);
 }
 @media (max-width: 767.98px) {
   .form__input {
@@ -2697,6 +2713,7 @@ html {
   align-items: center;
   justify-content: center;
   gap: 50px;
+  background: var(--auth-intro-bg);
 }
 .auth__intro-logo, .auth__intro-next {
   position: absolute;
@@ -2718,6 +2735,7 @@ html {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+  color: var(--auth-intro-text-color);
 }
 @media (max-width: 767.98px) {
   .auth__intro-text {
@@ -2748,20 +2766,27 @@ html {
   margin: 0 auto;
   padding: 50px 0;
 }
+@media (max-width: 767.98px) {
+  .auth__content-inner {
+    padding: 32px 0;
+  }
+}
 .auth__heading {
   margin-top: 50px;
   font-size: 3rem;
   font-weight: 500;
   line-height: 146.667%;
+  color: var(--auth-heading-color);
 }
 @media (max-width: 767.98px) {
   .auth__heading {
+    margin-top: 40px;
     font-size: 2.2rem;
   }
 }
 .auth__desc {
   margin-top: 10px;
-  padding: 0 30px;
+  padding: 0 20px;
   color: #9e9da8;
   font-size: 1.5rem;
   font-weight: 500;
@@ -2798,6 +2823,12 @@ html {
   gap: 30px;
   margin-top: 50px;
 }
+@media (max-width: 767.98px) {
+  .auth__btn-group {
+    margin-top: 40px;
+    gap: 20px;
+  }
+}
 .auth__btn {
   width: 100%;
 }
@@ -2809,6 +2840,7 @@ html {
 }
 @media (max-width: 767.98px) {
   .auth__text {
+    margin-top: 40px;
     font-size: 1.6rem;
   }
 }
