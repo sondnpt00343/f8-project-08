@@ -2669,7 +2669,7 @@ html {
   text-align: left;
 }
 .message--success {
-  border: 1.5px solid #46a05c;
+  border: 1.5px solid #5bc45f;
   background: rgba(39, 243, 117, 0.2);
 }
 
@@ -2740,8 +2740,7 @@ html {
   bottom: 50px;
 }
 .auth__intro-img {
-  width: var(--width);
-  max-width: 100%;
+  width: min(424px, 100%);
 }
 .auth__intro-text {
   max-width: 412px;
