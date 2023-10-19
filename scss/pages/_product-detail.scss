@@ -215,3 +215,44 @@
         line-height: 142.857%;
     }
 }
+
+.prod-tab {
+    &__list {
+        display: flex;
+        align-items: center;
+        margin: 0 -30px;
+    }
+
+    &__item {
+        padding: 0 30px;
+        color: #9e9da8;
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+
+        &--current {
+            color: inherit;
+        }
+    }
+
+    &__contents {
+        padding-top: 30px;
+    }
+
+    &__content {
+        display: none;
+
+        &--current {
+            display: block;
+        }
+    }
+}
+
+.prod-content {
+    &__heading {
+        margin-bottom: 30px;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 141.667%;
+    }
+}

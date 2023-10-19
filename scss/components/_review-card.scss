@@ -1,0 +1,43 @@
+.review-card {
+    padding: 30px;
+    border-radius: 16px;
+    background: var(--review-card-bg);
+
+    &__content {
+        display: flex;
+        gap: 20px;
+    }
+
+    &__avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+    }
+
+    &__desc {
+        margin-top: 10px;
+        font-size: 1.6rem;
+        line-height: 150%;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 20px;
+
+        &-title {
+            margin-left: 12px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 144.444%;
+        }
+    }
+}
