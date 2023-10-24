@@ -1784,6 +1784,11 @@ html {
   border-color: var(--header-act-dropdown-border-color);
   border-style: solid;
 }
+.act-dropdown__separate {
+  margin: 20px 0;
+  height: 1px;
+  background: var(--header-act-dropdown-border-color);
+}
 .act-dropdown__row {
   display: flex;
   align-items: center;
