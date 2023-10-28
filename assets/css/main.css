@@ -2680,6 +2680,13 @@ html {
   opacity: 0.5;
   pointer-events: none;
 }
+.form__row {
+  display: flex;
+  gap: 30px;
+}
+.form__row > * {
+  flex: 1;
+}
 .form__group {
   margin-top: 30px;
 }
@@ -2703,39 +2710,55 @@ html {
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
   display: none;
 }
-.form__text-input {
+.form__text-area, .form__text-input {
   display: flex;
   align-items: center;
-  height: 50px;
   padding: 0 12px;
   border-radius: 10px;
   border: 1.5px solid #d2d1d6;
 }
-.form__text-input:focus-within {
+.form__text-area--small, .form__text-input--small {
+  border-radius: 8px;
+}
+.form__text-area:focus-within, .form__text-input:focus-within {
   border-color: #77dae6;
+}
+.form__text-area {
+  height: 100px;
+  padding: 12px;
+}
+.form__text-area-input {
+  width: 100%;
+  resize: none;
+}
+.form__text-input {
+  height: 50px;
+}
+.form__text-input--small {
+  height: 42px;
 }
 @media (max-width: 767.98px) {
   .form__text-input {
     height: 48px;
   }
 }
-.form__input {
+.form__input, .form__text-area-input {
   flex: 1;
   height: 100%;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
-.form__input-icon {
-  margin-left: 12px;
-}
-.form__input::placeholder {
+.form__input::placeholder, .form__text-area-input::placeholder {
   color: var(--form-placeholder-color);
 }
 @media (max-width: 767.98px) {
-  .form__input {
+  .form__input, .form__text-area-input {
     font-size: 1.6rem;
   }
+}
+.form__input-icon {
+  margin-left: 12px;
 }
 .form__error {
   text-align: left;
@@ -3073,12 +3096,12 @@ html {
   background: var(--text-content-hr-bg);
 }
 
-.dialog__overlay, .dialog {
+.modal__overlay, .modal {
   position: fixed;
   inset: 0;
 }
 
-.dialog {
+.modal {
   z-index: 99;
   display: flex;
   align-items: center;
@@ -3088,27 +3111,60 @@ html {
   transition: opacity, visibility;
   transition-duration: 0.2s;
 }
-.dialog.show {
+.modal.show {
   opacity: 1;
   visibility: visible;
 }
-.dialog__overlay {
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  font-size: 3.5rem;
+  padding: 3px 20px;
+  opacity: 0.7;
+}
+.modal__close:hover {
+  opacity: 1;
+}
+.modal__overlay {
   background: rgba(0, 0, 0, 0.4);
 }
-.dialog__content {
+.modal__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 141.667%;
+}
+.modal__body {
+  padding-right: 20px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+.modal__content {
   position: relative;
   z-index: 1;
-  max-width: min(450px, 100% - 40px);
+  width: min(var(--content-width, 800px), 100% - 40px);
   padding: 30px;
   border-radius: 20px;
   background: var(--dialog-bg);
   box-shadow: 0px 20px 60px 10px var(--dialog-shadow);
 }
-.dialog__text {
+.modal--small .modal__content {
+  --content-width: 400px;
+}
+.modal--large .modal__content {
+  --content-width: 1100px;
+}
+.modal--fill .modal__content {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.modal__text {
   font-size: 1.8rem;
   line-height: 1.5;
 }
-.dialog__bottom {
+.modal__bottom {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -3117,13 +3173,13 @@ html {
   margin-top: 30px;
 }
 @media (max-width: 767.98px) {
-  .dialog {
+  .modal {
     padding: 20px;
   }
-  .dialog__bottom {
+  .modal__bottom {
     gap: 20px;
   }
-  .dialog__btn {
+  .modal__btn {
     flex: 1;
   }
 }
