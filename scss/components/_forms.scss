@@ -156,6 +156,13 @@ $error-color: #ed4337;
         }
     }
 
+    &__dialog-heading {
+        padding: 14px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
     &__close-dialog {
         font-size: 3rem;
         position: absolute;
@@ -190,16 +197,10 @@ $error-color: #ed4337;
         }
 
         @include abstracts.screen(sm) {
-            flex-direction: row-reverse;
-            margin-top: 30px;
-
-            &-icon {
-                margin-left: 0;
-            }
-
-            &-input {
-                padding-left: 8px;
-            }
+            padding: 0 14px;
+            border: 1px solid #d2d1d6;
+            margin: 10px 20px 0;
+            border-radius: 10px;
         }
     }
 

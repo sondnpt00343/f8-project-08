@@ -2449,6 +2449,10 @@ html {
 .btn--rounded {
   border-radius: 99px;
 }
+.btn--danger {
+  color: #fff;
+  background: #ed4337;
+}
 .btn[disabled], .btn--disabled {
   opacity: 0.5;
   pointer-events: none;
@@ -2819,6 +2823,12 @@ html {
     border-radius: 0;
   }
 }
+.form__dialog-heading {
+  padding: 14px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
 .form__close-dialog {
   font-size: 3rem;
   position: absolute;
@@ -2851,14 +2861,10 @@ html {
 }
 @media (max-width: 575.98px) {
   .form__search {
-    flex-direction: row-reverse;
-    margin-top: 30px;
-  }
-  .form__search-icon {
-    margin-left: 0;
-  }
-  .form__search-input {
-    padding-left: 8px;
+    padding: 0 14px;
+    border: 1px solid #d2d1d6;
+    margin: 10px 20px 0;
+    border-radius: 10px;
   }
 }
 .form__options-list {
@@ -3298,8 +3304,8 @@ html {
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
+  gap: 20px;
+  margin-top: 50px;
   padding-right: 20px;
 }
 @media (max-width: 767.98px) {
@@ -3309,7 +3315,7 @@ html {
 }
 @media (max-width: 575.98px) {
   .modal__bottom {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 }
 @media (max-width: 767.98px) {
