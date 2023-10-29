@@ -58,7 +58,8 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active,
 input:-webkit-autofill:hover {
     transition: background-color 1s 9999s;
-    -webkit-text-fill-color: #fff;
+    -webkit-text-fill-color: var(--text-color);
+    caret-color: var(--text-color);
 }
 
 .icon {
