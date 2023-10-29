@@ -433,7 +433,7 @@
         <!-- Modal: confirm remove shopping cart item -->
         <div id="delete-confirm" class="modal modal--small hide">
             <div class="modal__content">
-                <p class="modal__text">Do you want remove this item from shopping cart?</p>
+                <p class="modal__text">Do you want to remove this item from shopping cart?</p>
                 <div class="modal__bottom">
                     <button class="btn btn--small btn--outline modal__btn js-toggle" toggle-target="#delete-confirm">
                         Cancel
@@ -511,6 +511,7 @@
                                     name=""
                                     placeholder="City/District/Town"
                                     id="city"
+                                    readonly
                                     class="form__input js-toggle"
                                     toggle-target="#city-dialog"
                                 />
@@ -582,7 +583,12 @@
                         <button class="btn btn--small btn--text modal__btn js-toggle" toggle-target="#add-new-address">
                             Cancel
                         </button>
-                        <button class="btn btn--small btn--primary modal__btn btn--no-margin">Create</button>
+                        <button
+                            class="btn btn--small btn--primary modal__btn btn--no-margin js-toggle"
+                            toggle-target="#add-new-address"
+                        >
+                            Create
+                        </button>
                     </div>
                 </form>
             </div>

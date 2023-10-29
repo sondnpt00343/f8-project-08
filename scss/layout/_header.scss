@@ -6,6 +6,8 @@
 }
 
 .header {
+    position: relative;
+    z-index: 2;
     background: var(--header-bg-color);
 
     @include abstracts.screen(lg) {
