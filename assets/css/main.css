@@ -2964,6 +2964,12 @@ html {
   font-weight: 500;
   line-height: 145.455%;
 }
+.form__label--medium {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
 .form__label--small {
   margin-bottom: 10px;
   font-size: 1.4rem;
@@ -3840,6 +3846,14 @@ html {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+}
+.cart-info__desc {
+  margin-top: 6px;
+  font-size: 1.5rem;
+  line-height: 146.667%;
+}
+.cart-info__form {
+  margin-bottom: 30px;
 }
 .cart-info__list {
   margin-top: -30px;
