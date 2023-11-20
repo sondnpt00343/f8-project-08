@@ -1,0 +1,29 @@
+.favourite-item {
+    display: flex;
+    gap: 20px;
+
+    &__thumb {
+        width: 151px;
+        height: 108px;
+        object-fit: contain;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    &__price {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 145.455%;
+    }
+}
