@@ -45,7 +45,7 @@
                 <!-- Profile content -->
                 <div class="profile-container">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-3">
                             <aside class="profile__sidebar">
                                 <!-- User -->
                                 <div class="profile-user">
@@ -155,7 +155,72 @@
                                 </div>
                             </aside>
                         </div>
-                        <div class="col-8"></div>
+                        <div class="col-9">
+                            <div class="cart-info">
+                                <h2 class="cart-info__heading">My Wallet</h2>
+                                <p class="cart-info__desc profile__desc">Payment methods</p>
+
+                                <div class="row">
+                                    <!-- Payment card 1 -->
+                                    <div class="col-4">
+                                        <article class="payment-card" style="--bg-color: #1e2e69">
+                                            <img
+                                                src="./assets/img/card/plane-bg.svg"
+                                                alt=""
+                                                class="payment-card__img"
+                                            />
+                                            <div class="payment-card__top">
+                                                <img src="./assets/img/card/plane.svg" alt="" />
+                                                <span class="payment-card__type">FeatherCard</span>
+                                            </div>
+                                            <div class="payment-card__number">1234 4567 8901 2221</div>
+                                            <div class="payment-card__bottom">
+                                                <div>
+                                                    <p class="payment-card__label">Card Holder</p>
+                                                    <p class="payment-card__value">Imran Khan</p>
+                                                </div>
+                                                <div class="payment-card__expired">
+                                                    <p class="payment-card__label">Expired</p>
+                                                    <p class="payment-card__value">10/22</p>
+                                                </div>
+                                                <div class="payment-card__circle"></div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <!-- Payment card 2 -->
+                                    <div class="col-4">
+                                        <article class="payment-card" style="--bg-color: #354151">
+                                            <img src="./assets/img/card/leaf-bg.svg" alt="" class="payment-card__img" />
+                                            <div class="payment-card__top">
+                                                <img src="./assets/img/card/leaf.svg" alt="" />
+                                                <span class="payment-card__type">FeatherCard</span>
+                                            </div>
+                                            <div class="payment-card__number">1234 4567 2221 8901</div>
+                                            <div class="payment-card__bottom">
+                                                <div>
+                                                    <p class="payment-card__label">Card Holder</p>
+                                                    <p class="payment-card__value">Imran Khan</p>
+                                                </div>
+                                                <div class="payment-card__expired">
+                                                    <p class="payment-card__label">Expired</p>
+                                                    <p class="payment-card__value">11/22</p>
+                                                </div>
+                                                <div class="payment-card__circle"></div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <!-- Add new payment card -->
+                                    <div class="col-4">
+                                        <a class="new-card" href="#!">
+                                            <img src="./assets/icons/plus.svg" alt="" class="new-card__icon" />
+                                            <p class="new-card__text">Add New Card</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
