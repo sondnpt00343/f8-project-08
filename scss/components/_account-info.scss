@@ -4,18 +4,19 @@
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
-    background: #f6f6f6;
+    background: var(--account-info-bg);
 
     &__icon {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
 
         width: 54px;
         height: 54px;
         border-radius: 8px;
 
-        background: #fff;
+        background: var(--account-info-icon-bg);
     }
 
     &__title {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,8 +44,8 @@
 
                 <!-- Profile content -->
                 <div class="profile-container">
-                    <div class="row">
-                        <div class="col-3">
+                    <div class="row gy-md-3">
+                        <div class="col-3 col-xl-4 col-lg-5 col-md-12">
                             <aside class="profile__sidebar">
                                 <!-- User -->
                                 <div class="profile-user">
@@ -155,16 +155,17 @@
                                 </div>
                             </aside>
                         </div>
-                        <div class="col-9">
+                        <div class="col-9 col-xl-8 col-lg-7 col-md-12">
                             <div class="cart-info">
                                 <div class="row gy-3">
+                                    <!-- My Wallet -->
                                     <div class="col-12">
                                         <h2 class="cart-info__heading">My Wallet</h2>
                                         <p class="cart-info__desc profile__desc">Payment methods</p>
 
-                                        <div class="row">
+                                        <div class="row gy-md-2 row-cols-3 row-cols-xl-2 row-cols-lg-1">
                                             <!-- Payment card 1 -->
-                                            <div class="col-4">
+                                            <div class="col">
                                                 <article class="payment-card" style="--bg-color: #1e2e69">
                                                     <img
                                                         src="./assets/img/card/plane-bg.svg"
@@ -191,7 +192,7 @@
                                             </div>
 
                                             <!-- Payment card 2 -->
-                                            <div class="col-4">
+                                            <div class="col">
                                                 <article class="payment-card" style="--bg-color: #354151">
                                                     <img
                                                         src="./assets/img/card/leaf-bg.svg"
@@ -218,23 +219,28 @@
                                             </div>
 
                                             <!-- Add new payment card -->
-                                            <div class="col-4">
+                                            <div class="col">
                                                 <a class="new-card" href="#!">
-                                                    <img src="./assets/icons/plus.svg" alt="" class="new-card__icon" />
+                                                    <img
+                                                        src="./assets/icons/plus.svg"
+                                                        alt=""
+                                                        class="new-card__icon icon"
+                                                    />
                                                     <p class="new-card__text">Add New Card</p>
                                                 </a>
                                             </div>
                                         </div>
                                     </div>
 
+                                    <!-- Account info -->
                                     <div class="col-12">
                                         <h2 class="cart-info__heading">Account info</h2>
                                         <p class="cart-info__desc profile__desc">
                                             Addresses, contact information and password
                                         </p>
-                                        <div class="row">
+                                        <div class="row gy-md-2 row-cols-2 row-cols-lg-1">
                                             <!-- Account info 1 -->
-                                            <div class="col-6">
+                                            <div class="col">
                                                 <article class="account-info">
                                                     <div class="account-info__icon">
                                                         <img src="./assets/icons/message.svg" alt="" class="icon" />
@@ -247,7 +253,7 @@
                                             </div>
 
                                             <!-- Account info 2 -->
-                                            <div class="col-6">
+                                            <div class="col">
                                                 <article class="account-info">
                                                     <div class="account-info__icon">
                                                         <img src="./assets/icons/calling.svg" alt="" class="icon" />
@@ -260,7 +266,7 @@
                                             </div>
 
                                             <!-- Account info 3 -->
-                                            <div class="col-6">
+                                            <div class="col">
                                                 <article class="account-info">
                                                     <div class="account-info__icon">
                                                         <img src="./assets/icons/location.svg" alt="" class="icon" />
