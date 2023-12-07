@@ -5,7 +5,7 @@
     gap: 20px;
 
     height: 100%;
-    padding: 20px 26px;
+    padding: 20px;
     border-radius: 16px;
     background: var(--cate-item-bg);
 
@@ -19,8 +19,8 @@
 
     &__thumb {
         display: block;
-        width: 116px;
-        height: 116px;
+        width: 100px;
+        height: 100px;
         object-fit: contain;
         border-radius: 8px;
         background: var(--cate-item-thumb-bg);
